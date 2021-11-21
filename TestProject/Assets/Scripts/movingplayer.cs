@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class movingplayer : MonoBehaviour {
 private bool isJump = false;
-private Rigidbody2D rigidbody2D;
+private Rigidbody2D rigidbody_2D;
 public int jumphight = 20;
 void Start () {
-    rigidbody2D = transform.GetComponent<Rigidbody2D>();
+    rigidbody_2D = transform.GetComponent<Rigidbody2D>();
 }
 
 
@@ -17,7 +17,7 @@ void Update () {
 
 
     if (Input.GetKeyDown ("space") && isJump == false){
-        rigidbody2D.velocity = Vector2.up * jumphight;
+        rigidbody_2D.velocity = Vector2.up * jumphight;
         isJump = true;
     } 
   
