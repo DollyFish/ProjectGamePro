@@ -159,6 +159,7 @@ MonoBehaviour:
   startTimeBtwSpawn: 2
   decreaseTime: 0
   minTime: 0.65
+  counter: 1
 --- !u!4 &647118579
 Transform:
   m_ObjectHideFlags: 0
@@ -489,6 +490,7 @@ MonoBehaviour:
   startTimeBtwSpawn: 101
   decreaseTime: 0
   minTime: 0.65
+  counter: 1
 --- !u!4 &982119747
 Transform:
   m_ObjectHideFlags: 0
@@ -538,6 +540,7 @@ MonoBehaviour:
   startTimeBtwSpawn: 51
   decreaseTime: 0
   minTime: 0.65
+  counter: 1
 --- !u!4 &999923192
 Transform:
   m_ObjectHideFlags: 0
@@ -588,6 +591,7 @@ MonoBehaviour:
   startTimeBtwSpawn: 21
   decreaseTime: 0
   minTime: 0.65
+  counter: 1
 --- !u!4 &1162809041
 Transform:
   m_ObjectHideFlags: 0
