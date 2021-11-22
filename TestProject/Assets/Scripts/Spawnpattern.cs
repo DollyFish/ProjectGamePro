@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class spawn1 : MonoBehaviour
+public class Spawnpattern : MonoBehaviour
 {
     public GameObject[] ChickenPatterns;
 
