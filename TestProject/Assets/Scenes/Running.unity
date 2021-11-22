@@ -153,10 +153,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChickenPatterns:
-  - {fileID: 6158267431247423838, guid: ef912912ef4ce6a4f8b90697385ef35b, type: 3}
-  - {fileID: 1502166498807423239, guid: 5e446a5ded2aec74d83e625df2fc1dc0, type: 3}
-  - {fileID: 2068237209116324608, guid: 269371706624ae643bdd55f14d0f009c, type: 3}
-  startTimeBtwSpawn: 0
+  - {fileID: 2048329978512777245, guid: 860cc861cc60ba64f9bece2631987de2, type: 3}
+  - {fileID: 3063064489308243013, guid: 14499c244598d7a4bb98b30a2af6b579, type: 3}
+  - {fileID: 4892428326587209981, guid: e089a753050918247a467aa69b2f3745, type: 3}
+  startTimeBtwSpawn: 2
   decreaseTime: 0
   minTime: 0.65
 --- !u!4 &647118579
@@ -484,9 +484,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChickenPatterns:
   - {fileID: 0}
-  - {fileID: 1502166498807423239, guid: 7ca62ebf2ce94f846ad00b3ec25d95cb, type: 3}
+  - {fileID: 3063064489308243013, guid: a2cc2e32c686d0243bfa9ea9ca7301e2, type: 3}
   - {fileID: 0}
-  startTimeBtwSpawn: 0
+  startTimeBtwSpawn: 101
   decreaseTime: 0
   minTime: 0.65
 --- !u!4 &982119747
@@ -533,10 +533,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChickenPatterns:
-  - {fileID: 6158267431247423838, guid: ef912912ef4ce6a4f8b90697385ef35b, type: 3}
-  - {fileID: 1502166498807423239, guid: 5e446a5ded2aec74d83e625df2fc1dc0, type: 3}
-  - {fileID: 2068237209116324608, guid: 269371706624ae643bdd55f14d0f009c, type: 3}
-  startTimeBtwSpawn: 0
+  - {fileID: 2048329978512777245, guid: 04ab0ef66f97abb4d84e40a3560251ad, type: 3}
+  - {fileID: 4892428326587209981, guid: eb8c7fabcc6c44e4aab2e5af88daa9e6, type: 3}
+  startTimeBtwSpawn: 51
   decreaseTime: 0
   minTime: 0.65
 --- !u!4 &999923192
@@ -583,10 +582,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChickenPatterns:
-  - {fileID: 6158267431247423838, guid: ef912912ef4ce6a4f8b90697385ef35b, type: 3}
-  - {fileID: 1502166498807423239, guid: 5e446a5ded2aec74d83e625df2fc1dc0, type: 3}
-  - {fileID: 2068237209116324608, guid: 269371706624ae643bdd55f14d0f009c, type: 3}
-  startTimeBtwSpawn: 0
+  - {fileID: 2048329978512777245, guid: 3b463f9c6b295da43ba00d50194f9201, type: 3}
+  - {fileID: 3063064489308243013, guid: 4db064112397e5c4ebf3a4a82adab78b, type: 3}
+  - {fileID: 4892428326587209981, guid: fe43f18c8f747d3408687f490c377413, type: 3}
+  startTimeBtwSpawn: 21
   decreaseTime: 0
   minTime: 0.65
 --- !u!4 &1162809041
@@ -756,7 +755,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.371203, y: 0.02364111}
+  m_Offset: {x: -9.3753605, y: 0.02364111}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -767,7 +766,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 18.021603, y: 12.77324}
+  m_Size: {x: 2.0132866, y: 12.77324}
   m_EdgeRadius: 0
 --- !u!4 &1769262941
 Transform:
@@ -962,11 +961,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item1: {fileID: 0}
-  progress: 0
-  pressure: 0
-  daypoint: 0
-  day: 0
-  grade: 0
 --- !u!1 &2064041585
 GameObject:
   m_ObjectHideFlags: 0

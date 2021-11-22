@@ -10,7 +10,7 @@ public class Spawnpattern : MonoBehaviour
     public float startTimeBtwSpawn;
     public float decreaseTime;
     public float minTime = 0.65f;
-
+    public int counter = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,13 +22,20 @@ public class Spawnpattern : MonoBehaviour
     {
         if (timeBtwSpawn <= 0)
         {
-            int rand = Random.Range(0, ChickenPatterns.Length);
-            Instantiate(ChickenPatterns[rand], transform.position, Quaternion.identity);
-            timeBtwSpawn = startTimeBtwSpawn;
-            if (startTimeBtwSpawn > minTime)
-            {
-                startTimeBtwSpawn -= decreaseTime;
+            if (counter == 1){
+                timeBtwSpawn = startTimeBtwSpawn;
+                counter--;
             }
+            else{
+                int rand = Random.Range(0, ChickenPatterns.Length);
+                Instantiate(ChickenPatterns[rand], transform.position, Quaternion.identity);
+                timeBtwSpawn = startTimeBtwSpawn;
+                if (startTimeBtwSpawn > minTime)
+                {
+                    startTimeBtwSpawn -= decreaseTime;
+            }
+            }
+            
         }
         else
         {

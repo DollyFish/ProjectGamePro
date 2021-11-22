@@ -12,6 +12,7 @@ TagManager:
   - Grade
   - PG
   - GradeUp
+  - Rest
   layers:
   - Default
   - TransparentFX

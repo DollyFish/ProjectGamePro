@@ -7,15 +7,31 @@ public class collectitem : MonoBehaviour
     [SerializeField]
     private GameObject item1;
 
-    public int progress = 0;
-    public int pressure = 0;
-    public int daypoint = 0;
-    public int day = 0;
-    public int grade = 0;
-    
-        
+    private int progress = 0;
+    private int pressure = 0;
+    private int daypoint = 0;
+    private int day = 0;
+    private int grade = 0;
+    private int end = 10;
+    private int daystatus = 0;    
     void Start(){
-        spawnitem();
+        //spawnitem();
+        if (day == end){
+  
+            //end
+        }
+        if (daypoint > 0 && daypoint < 35){
+            daystatus = 1;
+            //Morning
+        }
+        if (daypoint > 35 && daypoint < 70){
+            daystatus = 2;
+            //Afternoon
+        }
+        if (daypoint > 70){
+            daystatus = 3;
+            //Night
+        }
     }
     private void OnTriggerEnter2D(Collider2D other) {
         
@@ -24,24 +40,24 @@ public class collectitem : MonoBehaviour
             day += 1;
             daypoint = 0;
         }
-        if (other.gameObject.tag == "Item1"){
+        if (other.gameObject.tag == "Progress"){
             Destroy(other.gameObject);
-            spawnitem();
+            //spawnitem();
             progress ++;
             daypoint += 5;
             pressure ++;
             Debug.Log("Progress collect:");
             
         }
-        if (other.gameObject.tag == "gradeup"){
+        if (other.gameObject.tag == "GradeUp"){
             Destroy(other.gameObject);
             grade += 10;
             daypoint += 10;
             progress ++;
-            Debug.Log("grade collect");
+            Debug.Log("grade(up) collect");
             
         }
-        if (other.gameObject.tag == "grade"){
+        if (other.gameObject.tag == "Grade"){
             Destroy(other.gameObject);
             grade += 5;
             daypoint += 5;
@@ -49,7 +65,7 @@ public class collectitem : MonoBehaviour
             Debug.Log("grade collect");
             
         }
-        if (other.gameObject.tag == "rest"){
+        if (other.gameObject.tag == "Rest"){
             Destroy(other.gameObject);
             pressure -= 20;
             if (daypoint != 100){
@@ -60,8 +76,13 @@ public class collectitem : MonoBehaviour
             Debug.Log("rest collect");
             
         }
+        if (other.gameObject.tag == "DP"){
+            Destroy(other.gameObject);
+            end += 1;
+            Debug.Log("rest collect");
+        }
     }
-    private void spawnitem(){
+    /*private void spawnitem(){
         Debug.Log("Item spawn");
         bool itemspawn = false;
         while (!itemspawn){
@@ -76,6 +97,6 @@ public class collectitem : MonoBehaviour
             }
         }
 
-    }
+    }*/
 
 }
