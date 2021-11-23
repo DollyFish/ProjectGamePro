@@ -18,7 +18,7 @@ public class BGscroll1 : MonoBehaviour
 
     public string stable;
 
-    public int xVelocity, yVelocity;
+    public float xVelocity, yVelocity;
 
     private void Awake()
     {
