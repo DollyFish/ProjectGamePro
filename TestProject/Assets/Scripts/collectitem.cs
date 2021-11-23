@@ -33,7 +33,7 @@ public class collectitem : MonoBehaviour
     public int grade = 0;
 
 
-    public int end = 10;
+    public int end = 7;
     public int daystatus = 0;
     public bool PS_status = false;    
     public string textgrade = "F";
@@ -144,14 +144,24 @@ public class collectitem : MonoBehaviour
             if (other.gameObject.tag == "Rest"){
 
                 Destroy(other.gameObject);
-                if (pressure > 20){
-                    pressure -= 20;
+                if (pressure > 30){
+                    pressure -= 30;
                 }
-                else if (pressure < 20){
+                else if (pressure < 30){
                     pressure = 0;
                 }
                 
                 if (daypoint != 100){
+                    if (deadline % 100 != 0){
+                        for (int i = 0; i < 100; i++){
+                            if (deadline % 100 != 0){
+                                deadline++;
+                            }
+                            else {
+                                break;
+                            }
+                        }
+                    }
                     daypoint = 0;
                     day ++;
                 }
