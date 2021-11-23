@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 public class collectitem : MonoBehaviour
 {
+    public AudioSource collect_item;
     [SerializeField]
     private GameObject item1;
 
@@ -13,6 +14,9 @@ public class collectitem : MonoBehaviour
 
     [SerializeField]
     TMP_Text deadline_text;
+
+    [SerializeField]
+    TMP_Text Garde_text;
 
     public float progress = 0;
     [SerializeField] Slider progressSlider;
@@ -30,9 +34,38 @@ public class collectitem : MonoBehaviour
     public int end = 10;
     public int daystatus = 0;
     public bool PS_status = false;    
+    private string textgrade;
     void Start(){
         //spawnitem();
-        if (day == end){
+       
+    }
+
+    public void updateAllSlider()
+    {
+        progressSlider.value = progress;
+        daySlider.value = deadline;
+        pressureSlider.value = pressure;
+        gradeSlider.value = grade;
+        dayText.SetText($"Day: {day}");
+        deadline_text.SetText($"{end}");
+        if (pressure >= 100){
+            PS_status = true;
+        }
+        else if (grade >= 10 && grade < 20){
+            textgrade = "D";
+        }
+        else if (grade >= 20 && grade < 30){
+            textgrade = "C";
+        }
+        else if (grade >= 30 && grade < 40){
+            textgrade = "B";
+        }
+        else if (grade >= 40){
+            textgrade = "A";
+        }
+        Garde_text.SetText($"{textgrade}");
+
+         if (day == end){
   
             //end
         }
@@ -48,19 +81,7 @@ public class collectitem : MonoBehaviour
             daystatus = 3;
             //Night
         }
-    }
 
-    public void updateAllSlider()
-    {
-        progressSlider.value = progress;
-        daySlider.value = daypoint;
-        pressureSlider.value = pressure;
-        gradeSlider.value = grade;
-        dayText.SetText($"Day: {day}");
-        deadline_text.SetText($"{end}");
-        if (pressure >= 100){
-            PS_status = true;
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -72,6 +93,7 @@ public class collectitem : MonoBehaviour
             
         }
         if (other.gameObject.tag == "Progress"){
+            //collect_item.play();
             Destroy(other.gameObject);
             //spawnitem();
             if (PS_status){
@@ -89,6 +111,7 @@ public class collectitem : MonoBehaviour
             
         }
         if (other.gameObject.tag == "GradeUp"){
+            //collect_item.play();
             Destroy(other.gameObject);
             grade += 10;
             daypoint += 10;
@@ -98,6 +121,7 @@ public class collectitem : MonoBehaviour
             
         }
         if (other.gameObject.tag == "Grade"){
+            //collect_item.play();
             Destroy(other.gameObject);
             grade += 5;
             daypoint += 5;
@@ -107,6 +131,7 @@ public class collectitem : MonoBehaviour
             
         }
         if (other.gameObject.tag == "Rest"){
+            //collect_item.play();
             Destroy(other.gameObject);
             if (pressure > 20){
                 pressure -= 20;
@@ -125,6 +150,7 @@ public class collectitem : MonoBehaviour
             
         }
         if (other.gameObject.tag == "DP"){
+            //collect_item.play();
             Destroy(other.gameObject);
             end += 1;
             Debug.Log("rest collect");

@@ -6,6 +6,7 @@ public class movingplayer : MonoBehaviour {
 private bool isJump = false;
 private Rigidbody2D rigidbody_2D;
 public int jumphight = 20;
+public AudioSource jumpsound;
 void Start () {
     rigidbody_2D = transform.GetComponent<Rigidbody2D>();
 }
@@ -17,6 +18,7 @@ void Update () {
 
 
     if (Input.GetKeyDown ("space") && isJump == false){
+        //jumpsound.play();
         rigidbody_2D.velocity = Vector2.up * jumphight;
         isJump = true;
     } 
