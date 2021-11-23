@@ -28,10 +28,10 @@ public class collectitem : MonoBehaviour
     public int daypoint = 0;
     public int day = 0;
     private bool status = true;
-    [SerializeField] Slider daySlider;
+    
 
     public int grade = 0;
-    [SerializeField] Slider gradeSlider;
+
 
     public int end = 10;
     public int daystatus = 0;
@@ -53,10 +53,10 @@ public class collectitem : MonoBehaviour
     public void updateAllSlider()
     {
         progressSlider.value = progress;
-        daySlider.value = deadline;
+        
         pressureSlider.value = pressure;
-        gradeSlider.value = grade;
-        dayText.SetText($"Day: {day}");
+
+        dayText.SetText($"Day {day}");
         deadline_text.SetText($"{end}");
 
         if (pressure >= 100){
@@ -73,6 +73,9 @@ public class collectitem : MonoBehaviour
         }
         else if (grade >= 40){
             textgrade = "A";
+        }
+        else {
+            textgrade = "F";
         }
         Garde_text.SetText($"{textgrade}");
 

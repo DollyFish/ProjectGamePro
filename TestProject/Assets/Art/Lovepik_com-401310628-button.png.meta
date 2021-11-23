@@ -1,49 +1,31 @@
 fileFormatVersion: 2
-guid: b45624a4516fbda40be37c8e66e943ab
+guid: 5062ba2c87cf64141ae4e0736b5f6556
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3770854237895646059
-    second: Run (32x34) 1_0
+      213: 5391747783460023388
+    second: Lovepik_com-401310628-button_0
   - first:
-      213: 3739248988426389900
-    second: Run (32x34) 1_1
+      213: 9189536216129419370
+    second: Lovepik_com-401310628-button_1
   - first:
-      213: -6830317261693899634
-    second: Run (32x34) 1_2
+      213: 9140449457967912979
+    second: Lovepik_com-401310628-button_2
   - first:
-      213: 7383480580384102341
-    second: Run (32x34) 1_3
+      213: -3642006660222780313
+    second: Lovepik_com-401310628-button_3
   - first:
-      213: -8086174353664941923
-    second: Run (32x34) 1_4
+      213: -3700263420715862395
+    second: Lovepik_com-401310628-button_4
   - first:
-      213: 3015671195131239309
-    second: Run (32x34) 1_5
+      213: -4094032503464525156
+    second: Lovepik_com-401310628-button_5
   - first:
-      213: 697873693942059284
-    second: Run (32x34) 1_6
+      213: 831570409019802100
+    second: Lovepik_com-401310628-button_6
   - first:
-      213: -4373793516672304680
-    second: Run (32x34) 1_7
-  - first:
-      213: 1551133493908197720
-    second: Run (32x34) 1_8
-  - first:
-      213: -8997116523319080548
-    second: Run (32x34) 1_9
-  - first:
-      213: -1920390776231756148
-    second: Run (32x34) 1_10
-  - first:
-      213: -4656265555379119936
-    second: Run (32x34) 1_11
-  - first:
-      213: 6750795085280902343
-    second: Run (32x34) 1_12
-  - first:
-      213: -3347796898783136905
-    second: Run (32x34) 1_13
+      213: 4846936359497570244
+    second: Lovepik_com-401310628-button_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -88,7 +70,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 31.9
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -181,13 +163,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Run (32x34) 1_0
+      name: Lovepik_com-401310628-button_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 2
-        width: 28
-        height: 29
+        x: 39
+        y: 788
+        width: 427
+        height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 594247aac0c3babc0800000000000000
-      internalID: -3770854237895646059
+      spriteID: c5c62a7da0653da40800000000000000
+      internalID: 5391747783460023388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (32x34) 1_1
+      name: Lovepik_com-401310628-button_1
       rect:
         serializedVersion: 2
-        x: 33
-        y: 6
-        width: 29
-        height: 28
+        x: 529
+        y: 788
+        width: 427
+        height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +198,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c89c4e1c42b74e330800000000000000
-      internalID: 3739248988426389900
+      spriteID: a683bf4108ac78f70800000000000000
+      internalID: 9189536216129419370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (32x34) 1_2
+      name: Lovepik_com-401310628-button_2
       rect:
         serializedVersion: 2
-        x: 65
-        y: 6
-        width: 29
-        height: 28
+        x: 39
+        y: 547
+        width: 427
+        height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +219,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8c248993a6d531a0800000000000000
-      internalID: -6830317261693899634
+      spriteID: 318d6959a5669de70800000000000000
+      internalID: 9140449457967912979
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (32x34) 1_3
+      name: Lovepik_com-401310628-button_3
       rect:
         serializedVersion: 2
-        x: 97
-        y: 5
-        width: 29
-        height: 29
+        x: 529
+        y: 547
+        width: 427
+        height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,20 +240,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c71acfe774677660800000000000000
-      internalID: 7383480580384102341
+      spriteID: 76c70db1d3ef47dc0800000000000000
+      internalID: -3642006660222780313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (32x34) 1_4
+      name: Lovepik_com-401310628-button_4
       rect:
         serializedVersion: 2
-        x: 129
-        y: 1
-        width: 29
-        height: 32
+        x: 39
+        y: 305
+        width: 427
+        height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,20 +261,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d906de9844328cf80800000000000000
-      internalID: -8086174353664941923
+      spriteID: 586fbd0160606acc0800000000000000
+      internalID: -3700263420715862395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (32x34) 1_5
+      name: Lovepik_com-401310628-button_5
       rect:
         serializedVersion: 2
-        x: 161
-        y: 0
-        width: 30
-        height: 27
+        x: 529
+        y: 305
+        width: 427
+        height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,20 +282,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8bdc2969f0d9d920800000000000000
-      internalID: 3015671195131239309
+      spriteID: c92081411231f27c0800000000000000
+      internalID: -4094032503464525156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (32x34) 1_6
+      name: Lovepik_com-401310628-button_6
       rect:
         serializedVersion: 2
-        x: 193
-        y: 0
-        width: 30
-        height: 27
+        x: 39
+        y: 65
+        width: 427
+        height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,20 +303,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41191895d685fa900800000000000000
-      internalID: 697873693942059284
+      spriteID: 4f10a5391e45a8b00800000000000000
+      internalID: 831570409019802100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (32x34) 1_7
+      name: Lovepik_com-401310628-button_7
       rect:
         serializedVersion: 2
-        x: 226
-        y: 2
-        width: 28
-        height: 29
+        x: 529
+        y: 65
+        width: 427
+        height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,134 +324,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d937dd48f92d43c0800000000000000
-      internalID: -4373793516672304680
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run (32x34) 1_8
-      rect:
-        serializedVersion: 2
-        x: 257
-        y: 6
-        width: 29
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 851db97c1bbb68510800000000000000
-      internalID: 1551133493908197720
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run (32x34) 1_9
-      rect:
-        serializedVersion: 2
-        x: 289
-        y: 6
-        width: 29
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c99c4c8d032d32380800000000000000
-      internalID: -8997116523319080548
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run (32x34) 1_10
-      rect:
-        serializedVersion: 2
-        x: 321
-        y: 5
-        width: 29
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c8ef4c083c66955e0800000000000000
-      internalID: -1920390776231756148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run (32x34) 1_11
-      rect:
-        serializedVersion: 2
-        x: 353
-        y: 1
-        width: 29
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c89db7b52f916fb0800000000000000
-      internalID: -4656265555379119936
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run (32x34) 1_12
-      rect:
-        serializedVersion: 2
-        x: 385
-        y: 0
-        width: 30
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7ccfe91ec54afad50800000000000000
-      internalID: 6750795085280902343
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run (32x34) 1_13
-      rect:
-        serializedVersion: 2
-        x: 417
-        y: 0
-        width: 30
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 77370eb357c3a81d0800000000000000
-      internalID: -3347796898783136905
+      spriteID: 4c717c450f6c34340800000000000000
+      internalID: 4846936359497570244
       vertices: []
       indices: 
       edges: []

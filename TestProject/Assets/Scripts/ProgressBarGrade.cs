@@ -24,7 +24,7 @@ public class ProgressBarGrade : MonoBehaviour
     }
     void GetCurrentFill(){
         
-        float fillAmount = (float)collectitemScript.daypoint/ (float)maximum;
+        float fillAmount = (float)collectitemScript.grade/ 40f;
         mask.fillAmount = fillAmount;
     }
 }

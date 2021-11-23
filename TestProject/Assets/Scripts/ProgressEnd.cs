@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ProgressEnd : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class ProgressEnd : MonoBehaviour
     public Sprite GradeC;
     public Sprite GradeB;
     public Sprite GradeA;
+    public Button restart;
 
     // Start is called before the first frame update
 
@@ -57,7 +59,13 @@ public class ProgressEnd : MonoBehaviour
             Resulttext.SetText("Timeout!");
             Grade.GetComponent<Image>().sprite = GradeF;
         }
-
-
     }
+
+    public void LoadScene(int SceneId)
+    {
+        SceneManager.LoadScene(SceneId);
+    }
+
+
+    
 }
