@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class StartGame : MonoBehaviour
 {
-    public AudioClip PlayingMusic; 
-    AudioSource audiosound;
-
     public collectitem collecting;
     public Spawnpattern spawning1;
     public Spawnpattern spawning2;
@@ -18,9 +15,15 @@ public class StartGame : MonoBehaviour
     [SerializeField] GameObject startcanvas;
     [SerializeField] GameObject bar;
 
+    public AudioSource audiosound;
+    
+
     // Start is called before the first frame update
+
+    
     void Start()
     {
+        
         collecting.enabled = false;
         spawning1.enabled = false;
         spawning2.enabled = false;
@@ -28,11 +31,11 @@ public class StartGame : MonoBehaviour
         spawning4.enabled = false;
         playerjump.enabled = false;
         startbut.onClick.AddListener(onclick);
-        audiosound = gameObject.GetComponent<AudioSource>();
     }
     
     private void onclick()
     {
+        audiosound.Play();
         startcanvas.SetActive(false);
         bar.SetActive(true);
         collecting.enabled = true;
@@ -41,8 +44,6 @@ public class StartGame : MonoBehaviour
         spawning3.enabled = true;
         spawning4.enabled = true;
         playerjump.enabled = true;
-        audiosound.clip = PlayingMusic;
-        audiosound.Play();
     }
     // Update is called once per frame
     void Update()

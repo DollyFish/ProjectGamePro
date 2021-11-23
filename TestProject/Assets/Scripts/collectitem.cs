@@ -6,9 +6,9 @@ using UnityEngine.UI;
 using TMPro;
 public class collectitem : MonoBehaviour
 {
-    public AudioSource collect_item;
-    [SerializeField]
-    private GameObject item1;
+    //public AudioClip collect_sound;
+    public AudioSource audiosound;
+    
 
     [SerializeField]
     TMP_Text dayText;
@@ -43,7 +43,7 @@ public class collectitem : MonoBehaviour
     public Spawnpattern spawning3;
     public Spawnpattern spawning4;
     [SerializeField] GameObject Endcanvas;
-    // public Movingplayer playerjump;
+    public movingplayer playerjump;
     
     void Start(){
         //spawnitem();
@@ -104,8 +104,7 @@ public class collectitem : MonoBehaviour
                 daypoint = 0;
                 
             }
-            if (other.gameObject.tag == "Progress"){
-                //collect_item.play();
+            if (other.gameObject.tag == "Progress"){  
                 Destroy(other.gameObject);
                 //spawnitem();
                 if (PS_status){
@@ -123,7 +122,7 @@ public class collectitem : MonoBehaviour
                 
             }
             if (other.gameObject.tag == "GradeUp"){
-                //collect_item.play();
+
                 Destroy(other.gameObject);
                 grade += 10;
                 daypoint += 10;
@@ -133,7 +132,7 @@ public class collectitem : MonoBehaviour
                 
             }
             if (other.gameObject.tag == "Grade"){
-                //collect_item.play();
+
                 Destroy(other.gameObject);
                 grade += 5;
                 daypoint += 5;
@@ -143,7 +142,7 @@ public class collectitem : MonoBehaviour
                 
             }
             if (other.gameObject.tag == "Rest"){
-                //collect_item.play();
+
                 Destroy(other.gameObject);
                 if (pressure > 20){
                     pressure -= 20;
@@ -162,13 +161,13 @@ public class collectitem : MonoBehaviour
                 
             }
             if (other.gameObject.tag == "DP"){
-                //collect_item.play();
+     
                 Destroy(other.gameObject);
                 end += 1;
                 Debug.Log("rest collect");
             }
             updateAllSlider();
-
+            audiosound.Play();
         }
 
     }
@@ -181,7 +180,7 @@ public class collectitem : MonoBehaviour
             spawning2.enabled = false;
             spawning3.enabled = false;
             spawning4.enabled = false;
-            // playerjump.enabled = false;
+            playerjump.enabled = false;
             status = false;
             Endcanvas.SetActive(true);
             //end

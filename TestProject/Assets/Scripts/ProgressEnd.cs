@@ -21,6 +21,7 @@ public class ProgressEnd : MonoBehaviour
     public Sprite GradeB;
     public Sprite GradeA;
     public Button restart;
+    public AudioSource audiosound;
 
     // Start is called before the first frame update
 
@@ -64,6 +65,11 @@ public class ProgressEnd : MonoBehaviour
     public void LoadScene(int SceneId)
     {
         SceneManager.LoadScene(SceneId);
+    }
+
+    public void playsound()
+    {
+        audiosound.Play();
     }
 
 
