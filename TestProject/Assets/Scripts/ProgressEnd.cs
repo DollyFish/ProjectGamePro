@@ -16,6 +16,9 @@ public class ProgressEnd : MonoBehaviour
     public Image Grade;
     public Sprite GradeF;
     public Sprite GradeD;
+    public Sprite GradeC;
+    public Sprite GradeB;
+    public Sprite GradeA;
 
     // Start is called before the first frame update
 
@@ -26,25 +29,35 @@ public class ProgressEnd : MonoBehaviour
         {
             checkbox.GetComponent<Image>().sprite = checktrue;
             Resulttext.SetText("Finish!");
+            if (collectitemScript.grade < 10)
+            {  
+                Grade.GetComponent<Image>().sprite = GradeF;
+            }
+
+            else if (collectitemScript.grade >= 10 && collectitemScript.grade < 20)
+            {  
+                Grade.GetComponent<Image>().sprite = GradeD;
+            }
+            else if (collectitemScript.grade >= 20 && collectitemScript.grade < 30)
+            {  
+                Grade.GetComponent<Image>().sprite = GradeC;
+            }
+            else if (collectitemScript.grade >= 30 && collectitemScript.grade < 40)
+            {  
+                Grade.GetComponent<Image>().sprite = GradeB;
+            }
+            else if (collectitemScript.grade >= 40)
+            {  
+                Grade.GetComponent<Image>().sprite = GradeA;
+            }
         }
         else
         {
             checkbox.GetComponent<Image>().sprite = checkfalse;
             Resulttext.SetText("Timeout!");
-        }
-
-        if (collectitemScript.grade < 10)
-        {  
             Grade.GetComponent<Image>().sprite = GradeF;
         }
 
-        else if (collectitemScript.grade >= 10 && collectitemScript.grade < 20)
-        {  
-            Grade.GetComponent<Image>().sprite = GradeD;
-        }
-        else if (collectitemScript.grade >= 10 && collectitemScript.grade < 20)
-        {  
-            Grade.GetComponent<Image>().sprite = GradeD;
-        }
+
     }
 }

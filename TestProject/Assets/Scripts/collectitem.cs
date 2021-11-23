@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -36,7 +37,12 @@ public class collectitem : MonoBehaviour
     public bool PS_status = false;    
     public string textgrade = "F";
 
-    public Spawnpattern spawning;
+    public Spawnpattern spawning1;
+    public Spawnpattern spawning2;
+    public Spawnpattern spawning3;
+    public Spawnpattern spawning4;
+    [SerializeField] GameObject Endcanvas;
+    
     void Start(){
         //spawnitem();
        
@@ -50,6 +56,7 @@ public class collectitem : MonoBehaviour
         gradeSlider.value = grade;
         dayText.SetText($"Day: {day}");
         deadline_text.SetText($"{end}");
+
         if (pressure >= 100){
             PS_status = true;
         }
@@ -67,10 +74,7 @@ public class collectitem : MonoBehaviour
         }
         Garde_text.SetText($"{textgrade}");
 
-         if (day == end){
-            spawning.enabled = false;
-            //end
-        }
+
         if (daypoint > 0 && daypoint < 35){
             daystatus = 1;
             //Morning
@@ -144,7 +148,7 @@ public class collectitem : MonoBehaviour
             
             if (daypoint != 100){
                 daypoint = 0;
-                day += 1;
+                day ++;
             }
             
             daypoint += 5;
@@ -160,6 +164,18 @@ public class collectitem : MonoBehaviour
         updateAllSlider();
     }
 
-
+    void Update()
+    {
+        if (day >= end){
+            Debug.Log("Ending");
+            spawning1.enabled = false;
+            spawning2.enabled = false;
+            spawning3.enabled = false;
+            spawning4.enabled = false;
+            // GetComponent("collectitem").enabled = false;
+            Endcanvas.SetActive(true);
+            //end
+        }
+    }
 
 }

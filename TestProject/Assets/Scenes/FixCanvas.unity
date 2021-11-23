@@ -1660,11 +1660,15 @@ MonoBehaviour:
   daySlider: {fileID: 191870446}
   grade: 0
   gradeSlider: {fileID: 1172210677}
-  end: 10
+  end: 1
   daystatus: 0
   PS_status: 0
   textgrade: 
-  spawning: {fileID: 647118578}
+  spawning1: {fileID: 647118578}
+  spawning2: {fileID: 982119746}
+  spawning3: {fileID: 999923191}
+  spawning4: {fileID: 1162809040}
+  Endcanvas: {fileID: 1759178122}
 --- !u!114 &732991563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4636,6 +4640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material1: {fileID: 2100000, guid: db5ac6e600227414c8c3a5591ba07adc, type: 2}
   material2: {fileID: 2100000, guid: ea8bb687fc0fdbe4f98d4c62d5bff3ef, type: 2}
+  material3: {fileID: 0}
   Object: {fileID: 1753560563}
   setting: 1
   stable: 
@@ -4720,7 +4725,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1759178123
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4773,6 +4778,9 @@ MonoBehaviour:
   Grade: {fileID: 93011093}
   GradeF: {fileID: -759610042390381480, guid: 0c244a600b705ad4b884ff2237ab3df5, type: 3}
   GradeD: {fileID: 3821585471859914676, guid: 0c244a600b705ad4b884ff2237ab3df5, type: 3}
+  GradeC: {fileID: 1853603091847573003, guid: 0c244a600b705ad4b884ff2237ab3df5, type: 3}
+  GradeB: {fileID: 3830994289948183367, guid: 0c244a600b705ad4b884ff2237ab3df5, type: 3}
+  GradeA: {fileID: -7373540252497360536, guid: 0c244a600b705ad4b884ff2237ab3df5, type: 3}
 --- !u!1 &1769262938
 GameObject:
   m_ObjectHideFlags: 0
