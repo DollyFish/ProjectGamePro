@@ -34,7 +34,9 @@ public class collectitem : MonoBehaviour
     public int end = 10;
     public int daystatus = 0;
     public bool PS_status = false;    
-    private string textgrade;
+    public string textgrade = "F";
+
+    public Spawnpattern spawning;
     void Start(){
         //spawnitem();
        
@@ -66,7 +68,7 @@ public class collectitem : MonoBehaviour
         Garde_text.SetText($"{textgrade}");
 
          if (day == end){
-  
+            spawning.enabled = false;
             //end
         }
         if (daypoint > 0 && daypoint < 35){
