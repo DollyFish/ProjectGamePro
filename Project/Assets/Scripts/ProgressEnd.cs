@@ -13,6 +13,7 @@ public class ProgressEnd : MonoBehaviour
     public Sprite checkfalse;
     public TMP_Text ProgressScoretext;
     public TMP_Text Resulttext;
+    public TMP_Text Daytext;
 
     public Image Grade;
     public Sprite GradeF;
@@ -28,6 +29,7 @@ public class ProgressEnd : MonoBehaviour
     void Update()
     {
         ProgressScoretext.SetText(collectitemScript.progress.ToString() + " %");
+        Daytext.SetText(collectitemScript.day.ToString());
         if (collectitemScript.progress >= 100)
         {
             checkbox.GetComponent<Image>().sprite = checktrue;

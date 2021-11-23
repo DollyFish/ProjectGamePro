@@ -185,7 +185,7 @@ public class collectitem : MonoBehaviour
 
     void Update()
     {
-        if (day >= end){
+        if (day >= end || progress >= 100){
             ingamesound.Stop();
             Debug.Log("Ending");
             spawning1.enabled = false;

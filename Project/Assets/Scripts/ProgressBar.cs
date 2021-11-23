@@ -24,7 +24,7 @@ public class ProgressBar : MonoBehaviour
     }
     void GetCurrentFill(){
         
-        float fillAmount = (float)collectitemScript.deadline/ 700;
+        float fillAmount = (float)collectitemScript.deadline/ (collectitemScript.end * 100);
         mask.fillAmount = fillAmount;
     }
 }
