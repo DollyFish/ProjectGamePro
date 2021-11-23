@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BGscroll1 : MonoBehaviour
+public class BGscroll : MonoBehaviour
 {
     public Image Daystate;
     public Sprite Morning;
