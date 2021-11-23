@@ -1660,7 +1660,7 @@ MonoBehaviour:
   daySlider: {fileID: 191870446}
   grade: 0
   gradeSlider: {fileID: 1172210677}
-  end: 1
+  end: 5
   daystatus: 0
   PS_status: 0
   textgrade: 
@@ -3185,7 +3185,7 @@ MonoBehaviour:
   - {fileID: 2048329978512777245, guid: 3b463f9c6b295da43ba00d50194f9201, type: 3}
   - {fileID: 3063064489308243013, guid: 4db064112397e5c4ebf3a4a82adab78b, type: 3}
   - {fileID: 4892428326587209981, guid: fe43f18c8f747d3408687f490c377413, type: 3}
-  startTimeBtwSpawn: 21
+  startTimeBtwSpawn: 1
   decreaseTime: 0
   minTime: 0.65
   counter: 1

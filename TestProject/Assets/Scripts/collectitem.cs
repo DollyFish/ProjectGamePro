@@ -27,6 +27,7 @@ public class collectitem : MonoBehaviour
     public int deadline = 0;
     public int daypoint = 0;
     public int day = 0;
+    private bool status = true;
     [SerializeField] Slider daySlider;
 
     public int grade = 0;
@@ -42,6 +43,7 @@ public class collectitem : MonoBehaviour
     public Spawnpattern spawning3;
     public Spawnpattern spawning4;
     [SerializeField] GameObject Endcanvas;
+    // public Movingplayer playerjump;
     
     void Start(){
         //spawnitem();
@@ -91,77 +93,81 @@ public class collectitem : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        
-        if (daypoint % 100 == 0){
-            //Day 35, Cool 35, Night 30
-            day += 1;
-            daypoint = 0;
-            
-        }
-        if (other.gameObject.tag == "Progress"){
-            //collect_item.play();
-            Destroy(other.gameObject);
-            //spawnitem();
-            if (PS_status){
-                progress += 0.5f;
-            }
-            else{
-                progress += 1f;
-            }
-            
-            daypoint += 5;
-            deadline += 5;
-            pressure += 2;
-            
-            Debug.Log("Progress collect:");
-            
-        }
-        if (other.gameObject.tag == "GradeUp"){
-            //collect_item.play();
-            Destroy(other.gameObject);
-            grade += 10;
-            daypoint += 10;
-            deadline += 10;
-            progress ++;
-            Debug.Log("grade(up) collect");
-            
-        }
-        if (other.gameObject.tag == "Grade"){
-            //collect_item.play();
-            Destroy(other.gameObject);
-            grade += 5;
-            daypoint += 5;
-            deadline += 5;
-            progress ++;
-            Debug.Log("grade collect");
-            
-        }
-        if (other.gameObject.tag == "Rest"){
-            //collect_item.play();
-            Destroy(other.gameObject);
-            if (pressure > 20){
-                pressure -= 20;
-            }
-            else if (pressure < 20){
-                pressure = 0;
-            }
-            
-            if (daypoint != 100){
+        if (status == true)
+        {
+            if (daypoint % 100 == 0){
+                //Day 35, Cool 35, Night 30
+                day += 1;
                 daypoint = 0;
-                day ++;
+                
             }
-            
-            daypoint += 5;
-            Debug.Log("rest collect");
-            
+            if (other.gameObject.tag == "Progress"){
+                //collect_item.play();
+                Destroy(other.gameObject);
+                //spawnitem();
+                if (PS_status){
+                    progress += 0.5f;
+                }
+                else{
+                    progress += 1f;
+                }
+                
+                daypoint += 5;
+                deadline += 5;
+                pressure += 2;
+                
+                Debug.Log("Progress collect:");
+                
+            }
+            if (other.gameObject.tag == "GradeUp"){
+                //collect_item.play();
+                Destroy(other.gameObject);
+                grade += 10;
+                daypoint += 10;
+                deadline += 10;
+                progress ++;
+                Debug.Log("grade(up) collect");
+                
+            }
+            if (other.gameObject.tag == "Grade"){
+                //collect_item.play();
+                Destroy(other.gameObject);
+                grade += 5;
+                daypoint += 5;
+                deadline += 5;
+                progress ++;
+                Debug.Log("grade collect");
+                
+            }
+            if (other.gameObject.tag == "Rest"){
+                //collect_item.play();
+                Destroy(other.gameObject);
+                if (pressure > 20){
+                    pressure -= 20;
+                }
+                else if (pressure < 20){
+                    pressure = 0;
+                }
+                
+                if (daypoint != 100){
+                    daypoint = 0;
+                    day ++;
+                }
+                
+                daypoint += 5;
+                Debug.Log("rest collect");
+                
+            }
+            if (other.gameObject.tag == "DP"){
+                //collect_item.play();
+                Destroy(other.gameObject);
+                end += 1;
+                Debug.Log("rest collect");
+            }
+            updateAllSlider();
+
         }
-        if (other.gameObject.tag == "DP"){
-            //collect_item.play();
-            Destroy(other.gameObject);
-            end += 1;
-            Debug.Log("rest collect");
-        }
-        updateAllSlider();
+
     }
 
     void Update()
@@ -172,7 +178,8 @@ public class collectitem : MonoBehaviour
             spawning2.enabled = false;
             spawning3.enabled = false;
             spawning4.enabled = false;
-            // GetComponent("collectitem").enabled = false;
+            // playerjump.enabled = false;
+            status = false;
             Endcanvas.SetActive(true);
             //end
         }
