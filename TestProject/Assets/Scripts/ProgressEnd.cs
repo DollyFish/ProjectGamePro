@@ -11,18 +11,21 @@ public class ProgressEnd : MonoBehaviour
     public Sprite checktrue;
     public Sprite checkfalse;
     public TMP_Text ProgressScoretext;
+    public TMP_Text Resulttext;
     // Start is called before the first frame update
 
     void Update()
     {
-        ProgressScoretext.SetText("Progress: " + collectitemScript.progress.ToString() + " %");
+        ProgressScoretext.SetText(collectitemScript.progress.ToString() + " %");
         if (collectitemScript.progress >= 100)
         {
             checkbox.GetComponent<Image>().sprite = checktrue;
+            Resulttext.SetText("Finish!");
         }
         else
         {
             checkbox.GetComponent<Image>().sprite = checkfalse;
+            Resulttext.SetText("Timeout!");
         }
     }
 }
