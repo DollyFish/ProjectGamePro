@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class collectitem : MonoBehaviour
 {
@@ -8,10 +9,18 @@ public class collectitem : MonoBehaviour
     private GameObject item1;
 
     public int progress = 0;
+    [SerializeField] Slider progressSlider;
+
     public int pressure = 0;
+    [SerializeField] Slider pressureSlider;
+
     public int daypoint = 0;
     public int day = 0;
+    [SerializeField] Slider daySlider;
+
     public int grade = 0;
+    [SerializeField] Slider gradeSlider;
+
     public int end = 10;
     public int daystatus = 0;    
     void Start(){
@@ -33,6 +42,15 @@ public class collectitem : MonoBehaviour
             //Night
         }
     }
+
+    public void updateAllSlider()
+    {
+        progressSlider.value = progress;
+        daySlider.value = day;
+        pressureSlider.value = pressure;
+        gradeSlider.value = grade;
+    }
+
     private void OnTriggerEnter2D(Collider2D other) {
         
         if (daypoint == 100){
@@ -46,6 +64,7 @@ public class collectitem : MonoBehaviour
             progress ++;
             daypoint += 5;
             pressure ++;
+            
             Debug.Log("Progress collect:");
             
         }
@@ -81,6 +100,7 @@ public class collectitem : MonoBehaviour
             end += 1;
             Debug.Log("rest collect");
         }
+        updateAllSlider();
     }
     /*private void spawnitem(){
         Debug.Log("Item spawn");
@@ -98,5 +118,7 @@ public class collectitem : MonoBehaviour
         }
 
     }*/
+
+
 
 }
