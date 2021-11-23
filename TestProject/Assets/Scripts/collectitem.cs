@@ -5,17 +5,25 @@ using UnityEngine.UI;
 using TMPro;
 public class collectitem : MonoBehaviour
 {
+    public AudioSource collect_item;
     [SerializeField]
     private GameObject item1;
 
     [SerializeField]
     TMP_Text dayText;
-    public int progress = 0;
+
+    [SerializeField]
+    TMP_Text deadline_text;
+
+    [SerializeField]
+    TMP_Text Garde_text;
+
+    public float progress = 0;
     [SerializeField] Slider progressSlider;
 
     public int pressure = 0;
     [SerializeField] Slider pressureSlider;
-
+    public int deadline = 0;
     public int daypoint = 0;
     public int day = 0;
     [SerializeField] Slider daySlider;
@@ -24,11 +32,43 @@ public class collectitem : MonoBehaviour
     [SerializeField] Slider gradeSlider;
 
     public int end = 10;
-    public int daystatus = 0;    
+    public int daystatus = 0;
+    public bool PS_status = false;    
+    public string textgrade = "F";
+
+    public Spawnpattern spawning;
     void Start(){
         //spawnitem();
-        if (day == end){
-  
+       
+    }
+
+    public void updateAllSlider()
+    {
+        progressSlider.value = progress;
+        daySlider.value = deadline;
+        pressureSlider.value = pressure;
+        gradeSlider.value = grade;
+        dayText.SetText($"Day: {day}");
+        deadline_text.SetText($"{end}");
+        if (pressure >= 100){
+            PS_status = true;
+        }
+        else if (grade >= 10 && grade < 20){
+            textgrade = "D";
+        }
+        else if (grade >= 20 && grade < 30){
+            textgrade = "C";
+        }
+        else if (grade >= 30 && grade < 40){
+            textgrade = "B";
+        }
+        else if (grade >= 40){
+            textgrade = "A";
+        }
+        Garde_text.SetText($"{textgrade}");
+
+         if (day == end){
+            spawning.enabled = false;
             //end
         }
         if (daypoint > 0 && daypoint < 35){
@@ -43,51 +83,57 @@ public class collectitem : MonoBehaviour
             daystatus = 3;
             //Night
         }
-    }
 
-    public void updateAllSlider()
-    {
-        progressSlider.value = progress;
-        daySlider.value = daypoint;
-        pressureSlider.value = pressure;
-        gradeSlider.value = grade;
-        dayText.SetText($"Day: {day}");
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
         
-        if (daypoint == 100){
+        if (daypoint % 100 == 0){
             //Day 35, Cool 35, Night 30
             day += 1;
             daypoint = 0;
+            
         }
         if (other.gameObject.tag == "Progress"){
+            //collect_item.play();
             Destroy(other.gameObject);
             //spawnitem();
-            progress ++;
+            if (PS_status){
+                progress += 0.5f;
+            }
+            else{
+                progress += 1f;
+            }
+            
             daypoint += 5;
+            deadline += 5;
             pressure += 2;
             
             Debug.Log("Progress collect:");
             
         }
         if (other.gameObject.tag == "GradeUp"){
+            //collect_item.play();
             Destroy(other.gameObject);
             grade += 10;
             daypoint += 10;
+            deadline += 10;
             progress ++;
             Debug.Log("grade(up) collect");
             
         }
         if (other.gameObject.tag == "Grade"){
+            //collect_item.play();
             Destroy(other.gameObject);
             grade += 5;
             daypoint += 5;
+            deadline += 5;
             progress ++;
             Debug.Log("grade collect");
             
         }
         if (other.gameObject.tag == "Rest"){
+            //collect_item.play();
             Destroy(other.gameObject);
             if (pressure > 20){
                 pressure -= 20;
@@ -106,28 +152,13 @@ public class collectitem : MonoBehaviour
             
         }
         if (other.gameObject.tag == "DP"){
+            //collect_item.play();
             Destroy(other.gameObject);
             end += 1;
             Debug.Log("rest collect");
         }
         updateAllSlider();
     }
-    /*private void spawnitem(){
-        Debug.Log("Item spawn");
-        bool itemspawn = false;
-        while (!itemspawn){
-            Vector3 pumpkinPosition = new Vector3(Random.Range(-7f, 7f), Random.Range(-4f, 4f), 0f);
-            if ((pumpkinPosition - transform.position).magnitude < 3)
-            {
-                continue;
-            }
-            else{
-                Instantiate(item1, pumpkinPosition, Quaternion.identity);
-                itemspawn = true;
-            }
-        }
-
-    }*/
 
 
 
