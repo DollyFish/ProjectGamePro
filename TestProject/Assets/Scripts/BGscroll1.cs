@@ -12,6 +12,8 @@ public class BGscroll1 : MonoBehaviour
 
     public Material material2;
 
+    public Material material3;
+
     public GameObject Object;
 
     public int setting = 1;
@@ -35,7 +37,7 @@ public class BGscroll1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (stable == "Day")
+        if (stable == "Day" || stable == "Evenning")
         {
             if (setting == 2)
             {
