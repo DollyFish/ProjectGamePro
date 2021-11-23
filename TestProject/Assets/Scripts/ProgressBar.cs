@@ -8,6 +8,7 @@ public class ProgressBar : MonoBehaviour
     public int maximum;
     public int current;
     public collectitem collectitemScript;
+
     public Image mask;  
     
     // Start is called before the first frame update
@@ -22,7 +23,8 @@ public class ProgressBar : MonoBehaviour
         GetCurrentFill();
     }
     void GetCurrentFill(){
-        float fillAmount = (float)current / (float)maximum;
+        
+        float fillAmount = (float)collectitemScript.daypoint/ (float)maximum;
         mask.fillAmount = fillAmount;
     }
 }

@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class collectitem : MonoBehaviour
 {
     [SerializeField]
     private GameObject item1;
 
+    [SerializeField]
+    TMP_Text dayText;
     public int progress = 0;
     [SerializeField] Slider progressSlider;
 
@@ -46,9 +48,10 @@ public class collectitem : MonoBehaviour
     public void updateAllSlider()
     {
         progressSlider.value = progress;
-        daySlider.value = day;
+        daySlider.value = daypoint;
         pressureSlider.value = pressure;
         gradeSlider.value = grade;
+        dayText.SetText($"Day: {day}");
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -63,7 +66,7 @@ public class collectitem : MonoBehaviour
             //spawnitem();
             progress ++;
             daypoint += 5;
-            pressure ++;
+            pressure += 2;
             
             Debug.Log("Progress collect:");
             
@@ -86,11 +89,18 @@ public class collectitem : MonoBehaviour
         }
         if (other.gameObject.tag == "Rest"){
             Destroy(other.gameObject);
-            pressure -= 20;
+            if (pressure > 20){
+                pressure -= 20;
+            }
+            else if (pressure < 20){
+                pressure = 0;
+            }
+            
             if (daypoint != 100){
                 daypoint = 0;
                 day += 1;
             }
+            
             daypoint += 5;
             Debug.Log("rest collect");
             
