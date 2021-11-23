@@ -45,6 +45,7 @@ public class collectitem : MonoBehaviour
     [SerializeField] GameObject Endcanvas;
     public movingplayer playerjump;
     
+    public AudioSource ingamesound;
     void Start(){
         //spawnitem();
        
@@ -185,6 +186,7 @@ public class collectitem : MonoBehaviour
     void Update()
     {
         if (day >= end){
+            ingamesound.Stop();
             Debug.Log("Ending");
             spawning1.enabled = false;
             spawning2.enabled = false;

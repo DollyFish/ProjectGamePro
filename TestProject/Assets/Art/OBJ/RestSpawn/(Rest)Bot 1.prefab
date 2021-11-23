@@ -88,4 +88,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25cccbeffd77c0a4794a5fdc582eb5a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Chicken: {fileID: 6108240060210452339, guid: 1f9b0a178f448394a9a27037360b7fcc, type: 3}
+  obj: {fileID: 6108240060210452339, guid: 1f9b0a178f448394a9a27037360b7fcc, type: 3}

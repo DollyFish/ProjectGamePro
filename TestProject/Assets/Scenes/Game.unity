@@ -1010,7 +1010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c544beb75029e49a6b8cf3ddc47b85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChickenPatterns:
+  spawnPatterns:
   - {fileID: 2048329978512777245, guid: 860cc861cc60ba64f9bece2631987de2, type: 3}
   - {fileID: 3063064489308243013, guid: 14499c244598d7a4bb98b30a2af6b579, type: 3}
   - {fileID: 4892428326587209981, guid: e089a753050918247a467aa69b2f3745, type: 3}
@@ -1687,7 +1687,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1762,7 +1762,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1833,7 +1833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c544beb75029e49a6b8cf3ddc47b85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChickenPatterns:
+  spawnPatterns:
   - {fileID: 2048329978512777245, guid: 507fbb1786ae4874e8c17e03cf8f81b4, type: 3}
   - {fileID: 3063064489308243013, guid: a2cc2e32c686d0243bfa9ea9ca7301e2, type: 3}
   - {fileID: 4892428326587209981, guid: 3ba37fdfc89edfc4eb80327762c71672, type: 3}
@@ -1987,7 +1987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c544beb75029e49a6b8cf3ddc47b85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChickenPatterns:
+  spawnPatterns:
   - {fileID: 2048329978512777245, guid: 04ab0ef66f97abb4d84e40a3560251ad, type: 3}
   - {fileID: 4892428326587209981, guid: eb8c7fabcc6c44e4aab2e5af88daa9e6, type: 3}
   startTimeBtwSpawn: 20.5
@@ -2024,7 +2024,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1022080625
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2069,7 +2069,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2700,7 +2700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c544beb75029e49a6b8cf3ddc47b85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChickenPatterns:
+  spawnPatterns:
   - {fileID: 2048329978512777245, guid: 3b463f9c6b295da43ba00d50194f9201, type: 3}
   - {fileID: 3063064489308243013, guid: 4db064112397e5c4ebf3a4a82adab78b, type: 3}
   - {fileID: 4892428326587209981, guid: fe43f18c8f747d3408687f490c377413, type: 3}
@@ -3464,7 +3464,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4313,6 +4313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1759178123}
   - component: {fileID: 1759178124}
+  - component: {fileID: 1759178125}
   m_Layer: 5
   m_Name: Endding
   m_TagString: Untagged
@@ -4378,6 +4379,102 @@ MonoBehaviour:
   GradeA: {fileID: -7373540252497360536, guid: 0c244a600b705ad4b884ff2237ab3df5, type: 3}
   restart: {fileID: 1075089059}
   audiosound: {fileID: 2036568806}
+--- !u!82 &1759178125
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759178122}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: edde7f5bc45839240b9bbdff07b7b6fb, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1769262938
 GameObject:
   m_ObjectHideFlags: 0
@@ -5257,7 +5354,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6168,6 +6265,10 @@ PrefabInstance:
       propertyPath: Garde_text
       value: 
       objectReference: {fileID: 1813771751}
+    - target: {fileID: 2531013295098404194, guid: 5125108555dfedf4d99cbcfc4b9433ca, type: 3}
+      propertyPath: ingamesound
+      value: 
+      objectReference: {fileID: 1022080626}
     - target: {fileID: 2531013295098404194, guid: 5125108555dfedf4d99cbcfc4b9433ca, type: 3}
       propertyPath: deadline_text
       value: 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawnpattern : MonoBehaviour
 {
-    public GameObject[] ChickenPatterns;
+    public GameObject[] spawnPatterns;
 
     private float timeBtwSpawn;
     public float startTimeBtwSpawn;
@@ -27,8 +27,8 @@ public class Spawnpattern : MonoBehaviour
                 counter--;
             }
             else{
-                int rand = Random.Range(0, ChickenPatterns.Length);
-                Instantiate(ChickenPatterns[rand], transform.position, Quaternion.identity);
+                int rand = Random.Range(0, spawnPatterns.Length);
+                Instantiate(spawnPatterns[rand], transform.position, Quaternion.identity);
                 timeBtwSpawn = startTimeBtwSpawn;
                 if (startTimeBtwSpawn > minTime)
                 {
