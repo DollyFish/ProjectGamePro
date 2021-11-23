@@ -7,13 +7,13 @@ public class collectitem : MonoBehaviour
     [SerializeField]
     private GameObject item1;
 
-    private int progress = 0;
-    private int pressure = 0;
-    private int daypoint = 0;
-    private int day = 0;
-    private int grade = 0;
-    private int end = 10;
-    private int daystatus = 0;    
+    public int progress = 0;
+    public int pressure = 0;
+    public int daypoint = 0;
+    public int day = 0;
+    public int grade = 0;
+    public int end = 10;
+    public int daystatus = 0;    
     void Start(){
         //spawnitem();
         if (day == end){

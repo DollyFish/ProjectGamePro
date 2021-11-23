@@ -7,6 +7,7 @@ public class ProgressBar : MonoBehaviour
 {
     public int maximum;
     public int current;
+    public collectitem collectitemScript;
     public Image mask;  
     
     // Start is called before the first frame update
