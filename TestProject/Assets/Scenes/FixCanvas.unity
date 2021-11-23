@@ -2772,8 +2772,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d483bb459b0ad094085a09d6342aa83b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material1: {fileID: 2100000, guid: 41a513ae70ef23849b4a02eb307089c9, type: 2}
-  material2: {fileID: 2100000, guid: d0834b3cecc59284f8449fbf49aa355e, type: 2}
+  material1: {fileID: 2100000, guid: db5ac6e600227414c8c3a5591ba07adc, type: 2}
+  material2: {fileID: 2100000, guid: ea8bb687fc0fdbe4f98d4c62d5bff3ef, type: 2}
   Object: {fileID: 1753560563}
   setting: 1
   stable: 
