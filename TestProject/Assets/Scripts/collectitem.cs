@@ -10,12 +10,16 @@ public class collectitem : MonoBehaviour
 
     [SerializeField]
     TMP_Text dayText;
-    public int progress = 0;
+
+    [SerializeField]
+    TMP_Text deadline_text;
+
+    public float progress = 0;
     [SerializeField] Slider progressSlider;
 
     public int pressure = 0;
     [SerializeField] Slider pressureSlider;
-
+    public int deadline = 0;
     public int daypoint = 0;
     public int day = 0;
     [SerializeField] Slider daySlider;
@@ -24,7 +28,8 @@ public class collectitem : MonoBehaviour
     [SerializeField] Slider gradeSlider;
 
     public int end = 10;
-    public int daystatus = 0;    
+    public int daystatus = 0;
+    public bool PS_status = false;    
     void Start(){
         //spawnitem();
         if (day == end){
@@ -52,20 +57,32 @@ public class collectitem : MonoBehaviour
         pressureSlider.value = pressure;
         gradeSlider.value = grade;
         dayText.SetText($"Day: {day}");
+        deadline_text.SetText($"{end}");
+        if (pressure >= 100){
+            PS_status = true;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
         
-        if (daypoint == 100){
+        if (daypoint % 100 == 0){
             //Day 35, Cool 35, Night 30
             day += 1;
             daypoint = 0;
+            
         }
         if (other.gameObject.tag == "Progress"){
             Destroy(other.gameObject);
             //spawnitem();
-            progress ++;
+            if (PS_status){
+                progress += 0.5f;
+            }
+            else{
+                progress += 1f;
+            }
+            
             daypoint += 5;
+            deadline += 5;
             pressure += 2;
             
             Debug.Log("Progress collect:");
@@ -75,6 +92,7 @@ public class collectitem : MonoBehaviour
             Destroy(other.gameObject);
             grade += 10;
             daypoint += 10;
+            deadline += 10;
             progress ++;
             Debug.Log("grade(up) collect");
             
@@ -83,6 +101,7 @@ public class collectitem : MonoBehaviour
             Destroy(other.gameObject);
             grade += 5;
             daypoint += 5;
+            deadline += 5;
             progress ++;
             Debug.Log("grade collect");
             
@@ -112,22 +131,6 @@ public class collectitem : MonoBehaviour
         }
         updateAllSlider();
     }
-    /*private void spawnitem(){
-        Debug.Log("Item spawn");
-        bool itemspawn = false;
-        while (!itemspawn){
-            Vector3 pumpkinPosition = new Vector3(Random.Range(-7f, 7f), Random.Range(-4f, 4f), 0f);
-            if ((pumpkinPosition - transform.position).magnitude < 3)
-            {
-                continue;
-            }
-            else{
-                Instantiate(item1, pumpkinPosition, Quaternion.identity);
-                itemspawn = true;
-            }
-        }
-
-    }*/
 
 
 
